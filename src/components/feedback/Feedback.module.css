@@ -1,0 +1,16 @@
+.title{
+font-size: 25px;
+font-weight: 700;
+}
+
+.buttons{
+display: flex;
+gap: 15px;
+}
+
+.results{
+display: flex;
+flex-direction: column;
+gap: 15px;
+
+}
