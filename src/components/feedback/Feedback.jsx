@@ -1,12 +1,12 @@
 import React from "react";
-import clsx from "clsx";
+// import clsx from "clsx";
 
-import css from 'components/feedback/Feedback.module.css';
+// import css from 'components/feedback/Feedback.module.css';
 
-import FeedbackOptions from "components/feedback/FeedbackOptions";
-import Statistics from "components/feedback/Statistics";
-import Section from "components/feedback/Section";
-import Notification from "components/feedback/Notification";
+// import FeedbackOptions from "components/feedback/FeedbackOptions";
+// import Statistics from "components/feedback/Statistics";
+// import Section from "components/feedback/Section";
+// import Notification from "components/feedback/Notification";
 
 class Feedback extends React.Component {
 
