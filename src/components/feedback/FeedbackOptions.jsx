@@ -1,14 +1,8 @@
 import clsx from "clsx";
 import React from "react";
+import PropTypes from "prop-types";
 
 import css from 'components/feedback/Feedback.module.css'
-
-// const FeedbackOptions = ({ options, onLeaveFeedback}) => (
-//      <div className={clsx(css["buttons"])}>
-//         <button type="button" onClick={onLeaveFeedback}>Good</button>
-//         <button type="button" onClick={onLeaveFeedback}>Neutral</button>
-//         <button type="button" onClick={onLeaveFeedback}>Bad</button>
-//     </div>
 
 const FeedbackOptions = ({ onGood, onNeutral, onBad }) => (
     <div className={clsx(css["buttons"])}>
@@ -21,12 +15,8 @@ const FeedbackOptions = ({ onGood, onNeutral, onBad }) => (
 
 export default FeedbackOptions;
 
-// Statistics.propTypes = {
-//     title: PropTypes.string,
-
-//     stats: PropTypes.arrayOf(PropTypes.shape({
-//         id: PropTypes.string.isRequired,
-//         label: PropTypes.string.isRequired,
-//         percentage: PropTypes.number.isRequired,
-//     })).isRequired,
-// }
+FeedbackOptions.propTypes = {
+    onGood: PropTypes.func.isRequired,
+    onNeutral: PropTypes.func.isRequired,
+    onBad: PropTypes.func.isRequired,
+}
