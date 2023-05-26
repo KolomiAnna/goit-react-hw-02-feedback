@@ -3,7 +3,6 @@ import clsx from "clsx";
 
 import css from 'components/feedback/Feedback.module.css';
 
-
 import FeedbackOptions from "components/feedback/FeedbackOptions";
 import Statistics from "components/feedback/Statistics";
 import Section from "components/feedback/Section";
