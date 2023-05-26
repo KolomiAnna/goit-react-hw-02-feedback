@@ -1,34 +1,34 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
 
-class Counter extends React.Component {
-        state = {
-            value:0,
-        }
+// class Counter extends React.Component {
+//         state = {
+//             value:0,
+//         }
 
 
-    handleIncrement = () => {
-        this.setState(prevState => ({ value: prevState.value + 1 })
-         );
-    }
+//     handleIncrement = () => {
+//         this.setState(prevState => ({ value: prevState.value + 1 })
+//          );
+//     }
 
-    handleDecrement = () => {
-        this.setState(prevState =>  ({value: prevState.value - 1}));
-    }
+//     handleDecrement = () => {
+//         this.setState(prevState =>  ({value: prevState.value - 1}));
+//     }
  
-    render() {
-        const { value } = this.state;
-    return (
-            <div >
-                <button type="button" onClick={this.handleIncrement}>Increment by </button>
-                <span>{value}</span>
-                <button type="button" onClick={this.handleDecrement}>Decrement by </button>
-            </div>
-        );
+//     render() {
+//         const { value } = this.state;
+//     return (
+//             <div >
+//                 <button type="button" onClick={this.handleIncrement}>Increment by </button>
+//                 <span>{value}</span>
+//                 <button type="button" onClick={this.handleDecrement}>Decrement by </button>
+//             </div>
+//         );
     
-}
-}
-export default Counter;
+// }
+// }
+// export default Counter;
 
 
 
