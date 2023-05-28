@@ -5,7 +5,6 @@ import PropTypes from "prop-types";
 import css from 'components/feedback/Feedback.module.css'
 
 const Statistics = ({ onStateGood, onStateNeutral, onStateBad, onStateTotal, onStatePositiveFeed }) => (
-    (onStateGood !== 0 || onStateNeutral !== 0 || onStateBad !== 0) && (
     <div className={clsx(css["results"])}>
         <span>Good: {onStateGood}</span>
         <span>Neutral: {onStateNeutral}</span>
@@ -15,8 +14,6 @@ const Statistics = ({ onStateGood, onStateNeutral, onStateBad, onStateTotal, onS
             <span>Positive feedback: {onStatePositiveFeed} %</span>
             )} 
     </div>
-    )
-
 )
 
 export default Statistics;

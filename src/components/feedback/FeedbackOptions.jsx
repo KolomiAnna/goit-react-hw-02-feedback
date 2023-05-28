@@ -4,19 +4,16 @@ import PropTypes from "prop-types";
 
 import css from 'components/feedback/Feedback.module.css'
 
-const FeedbackOptions = ({ onGood, onNeutral, onBad }) => (
+const FeedbackOptions = ({  options, onLeaveFeedback }) => (
     <div className={clsx(css["buttons"])}>
-        <button type="button" onClick={onGood}>Good</button>
-        <button type="button" onClick={onNeutral}>Neutral</button>
-        <button type="button" onClick={onBad}>Bad</button>
+        {options.map((option) =>
+            <button key={option} type="button" onClick={onLeaveFeedback}>{option}</button>)}
     </div>
-
 )
 
 export default FeedbackOptions;
 
 FeedbackOptions.propTypes = {
-    onGood: PropTypes.func.isRequired,
-    onNeutral: PropTypes.func.isRequired,
-    onBad: PropTypes.func.isRequired,
+    options: PropTypes.array.isRequired,
+    onLeaveFeedback: PropTypes.func.isRequired,
 }

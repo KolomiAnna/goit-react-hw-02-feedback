@@ -16,22 +16,11 @@ class Feedback extends React.Component {
         bad: 0,
     }
 
-    handleGood = () => {
-        this.setState(prevState => ({
-            good: prevState.good + 1,
-        }));
-    }
-
-    handleNeutral = () => {
-        this.setState(prevState => ({
-            neutral: prevState.neutral + 1,
-        }));
-    }
-
-    handleBad = () => {
-        this.setState(prevState => ({
-            bad: prevState.bad + 1,
-        }));
+    handlChangeState = (event) => {
+        const feedbackKey = event.target.innerText.toLowerCase();
+        this.setState(prevState => {
+            return {[feedbackKey] : prevState[feedbackKey] + 1}
+        })
     }
 
     countTotalFeedback = () => {
@@ -52,9 +41,8 @@ class Feedback extends React.Component {
             <div>
                 <Section title="Please leave feedback"
                     children={<FeedbackOptions
-                        onGood={this.handleGood}
-                        onNeutral={this.handleNeutral}
-                        onBad={this.handleBad}
+                        options={Object.keys(this.state)}
+                        onLeaveFeedback={this.handlChangeState}
                     />}
                 />
                 <Section title="Statistics"
@@ -75,33 +63,6 @@ class Feedback extends React.Component {
 }
 
 export default Feedback;
-
-
-
-
-
-    // handlChangeState = () => {
-    //     this.setState(prevState => {
-            // console.log(prevState);
-            // console.log(Object.entries(prevState));
-            // console.log(Object.keys(prevState));
-            // console.log(Object.values(prevState));
-
-            // const arrayKeys = Object.keys(prevState);
-            // const arrayValue = Object.values(prevState);
-
-            // console.log(arrayValue);
-            // for (let key of arrayKeys) {
-            //     console.log(key);
-            //     console.log(arrayKeys);
-            // }
-           
-            // for (let value of arrayValue) {
-            //     console.log(value);
-            //     console.log(arrayValue);
-            // }})}
-
-
 
 
 
